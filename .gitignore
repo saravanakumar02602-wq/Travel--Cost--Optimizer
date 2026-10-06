@@ -1,0 +1,20 @@
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local data and generated artifacts
+data/raw/*
+!data/raw/**/
+data/processed/*
+reports/*
+database/*.db
+
+# Environment files
+.env

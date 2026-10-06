@@ -1,0 +1,18 @@
+flowchart TD
+    U[User] --> UI[R Shiny UI]
+    UI -->|trip parameters / JSON result| DE[Python Dashboard Engine]
+    DE --> O[Weighted Multi-Objective Optimizer]
+    O --> CE[Cost Engine]
+    O --> TE[Transport Engine]
+    O --> SE[Scenario Engine]
+    CE --> D[(Processed CSV datasets)]
+    TE --> D
+    SE --> CE
+    O --> BP[Best Feasible Plan]
+    BP --> UI
+    UI --> V[Cost charts and transport comparison]
+    UI --> M[Leaflet route map]
+    UI --> A[R Analytics]
+    UI --> R[Downloadable travel report]
+    UI -->|Save trip| H[SQLite trip history]
+    H --> UI
